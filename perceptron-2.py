@@ -6,8 +6,10 @@ Created on Tue Mar  8 17:06:21 2022
 """
 import numpy as np
 
+# Equaçao das definiçoes de pesos da rede neural
+# peso(n + 1) = peso(n) + (taxaAprendizagem * entrada * erro)
 
-entradas = np.array([-1, 7, 5])
+entradas = np.array([1, 7, 5])
 pesos = np.array([0.8, 0.1, 0])
 
 
@@ -20,7 +22,6 @@ def stepFunc(soma):
     if soma >= 1:
         return 1
     return 0
-
 
 s = soma(entradas, pesos)
 
